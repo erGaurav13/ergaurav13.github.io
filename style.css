@@ -30,10 +30,10 @@ html{
 }
 .navbar.sticky{
     padding: 15px 20px;
-    background-color: #526BCF;
+    
     background-color: black;
-    /* -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px); */
+ 
+ 
 }
 .navbar .max-width{
     display: flex;
