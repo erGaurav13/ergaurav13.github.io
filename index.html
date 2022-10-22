@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurav Kumar Developer</title>
    <link rel="stylesheet" href="./style.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
@@ -156,9 +160,16 @@
          </div>
     </div>
    </section>
+     <div class="github" id="github">
+        <h1>Days <span>I Code</span></h1>
+        <div class="calendar"></div>
+    </div>
    
 </body>
 </html>
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
 <script>
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -176,4 +187,35 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     })
 });
-    </script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyvVBWH9iC1W-tXwLDu7JhdNwnC2N1wQQanlCysdjmiFlZT8P7ypmAnFCgYryes6NM/exec'
+  const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg");
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent successfully";
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+GitHubCalendar(".calendar", "erGaurav13
+");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "erGaurav13
+", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".calendar", "erGaurav13
+", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${erGaurav13
+}`)
+       }
+    })
+</script>
