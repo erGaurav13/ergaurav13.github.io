@@ -203,16 +203,13 @@ $(document).ready(function(){
       })
       .catch(error => console.error('Error!', error.message))
   })
-GitHubCalendar(".calendar", "erGaurav13
-");
+GitHubCalendar(".calendar", "erGaurav13");
 
     // or enable responsive functionality:
-    GitHubCalendar(".calendar", "erGaurav13
-", { responsive: true });
+    GitHubCalendar(".calendar", "erGaurav13", { responsive: true });
 
     // Use a proxy
-    GitHubCalendar(".calendar", "erGaurav13
-", {
+    GitHubCalendar(".calendar", "erGaurav13", {
        proxy (username) {
          return fetch(`https://your-proxy.com/github?user=${erGaurav13
 }`)
