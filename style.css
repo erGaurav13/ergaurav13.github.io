@@ -445,6 +445,7 @@ width: 45%;
 }
 /* Skills section */
 .skill{
+   
     background-color: #111;
 }
 #skills,#tool,#skills-1{
@@ -608,6 +609,10 @@ width: 45%;
     width: 100%;
     background: #111;
     margin: auto;
+  
+    background-image: url('https://i.pinimg.com/originals/fc/98/0b/fc980b6ec648175e3c8ac9e9f1ed57f2.jpg'); background-size: cover;
+    
+   
 }
 .contactdetails{
     display: grid;
@@ -624,6 +629,7 @@ width: 45%;
     margin-bottom: -0px;
 }
 .github{
+    
     background: #111;
 }
 .github>h1{
